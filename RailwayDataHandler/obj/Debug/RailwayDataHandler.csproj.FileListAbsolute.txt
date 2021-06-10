@@ -1,0 +1,10 @@
+D:\RailwayDataHandler\RailwayDataHandler\bin\Debug\RailwayDataHandler.exe.config
+D:\RailwayDataHandler\RailwayDataHandler\bin\Debug\RailwayDataHandler.exe
+D:\RailwayDataHandler\RailwayDataHandler\bin\Debug\RailwayDataHandler.pdb
+D:\RailwayDataHandler\RailwayDataHandler\obj\Debug\RailwayDataHandler.csprojAssemblyReference.cache
+D:\RailwayDataHandler\RailwayDataHandler\obj\Debug\RailwayDataHandler.Properties.Resources.resources
+D:\RailwayDataHandler\RailwayDataHandler\obj\Debug\RailwayDataHandler.csproj.GenerateResource.cache
+D:\RailwayDataHandler\RailwayDataHandler\obj\Debug\RailwayDataHandler.csproj.CoreCompileInputs.cache
+D:\RailwayDataHandler\RailwayDataHandler\obj\Debug\RailwayDataHandler.exe
+D:\RailwayDataHandler\RailwayDataHandler\obj\Debug\RailwayDataHandler.pdb
+D:\RailwayDataHandler\RailwayDataHandler\obj\Debug\RailwayDataHandler.View.MainForm.resources
