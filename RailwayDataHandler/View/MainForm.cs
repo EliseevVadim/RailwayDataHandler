@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Data.OleDb;
+using RailwayDataHandler.Core.Models;
 
 namespace RailwayDataHandler.View
 {
@@ -18,7 +19,7 @@ namespace RailwayDataHandler.View
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
             
         }

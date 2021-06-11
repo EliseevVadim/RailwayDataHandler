@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data.OleDb;
 
 namespace RailwayDataHandler.Core.Models
 {
@@ -23,7 +24,16 @@ namespace RailwayDataHandler.Core.Models
 
         public void AddToDatabase()
         {
-            throw new NotImplementedException();
+            string connectionString = DatabaseInformation.ConnectionString;
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                connection.Open();
+                string query = string.Format(@"INSERT INTO Road (road_name, road_description) VALUES (@name, @description)");
+                OleDbCommand command = new OleDbCommand(query, connection);
+                command.Parameters.AddWithValue("@name", _name);
+                command.Parameters.AddWithValue("@description", _description);
+                command.ExecuteNonQuery();
+            }
         }
     }
 }

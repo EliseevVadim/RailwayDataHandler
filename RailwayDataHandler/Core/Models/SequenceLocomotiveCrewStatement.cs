@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data.OleDb;
+using RailwayDataHandler.Core.Exceptions;
 
 namespace RailwayDataHandler.Core.Models
 {
@@ -13,6 +15,7 @@ namespace RailwayDataHandler.Core.Models
         private string _wayType;
         private int _orderNumber;
         private int _trainNumber;
+        private bool isStationsValid => _departureStationId != _arrivalStationId;
 
         public int RouteId { get => _routeId; set => _routeId = value; }
         public int DepartureStationId { get => _departureStationId; set => _departureStationId = value; }
@@ -35,7 +38,26 @@ namespace RailwayDataHandler.Core.Models
 
         public void AddToDatabase()
         {
-            throw new NotImplementedException();
+            if (isStationsValid)
+            {
+                using (OleDbConnection connection = new OleDbConnection(DatabaseInformation.ConnectionString))
+                {
+                    connection.Open();
+                    string query = string.Format(@"INSERT INTO Sequence_locomotive_crew_statement (route_id, departure_station_id, arrival_station_id, way_type, order_number, train_number) VALUES (@route, @departure, @arrival, @way, @order, @train)");
+                    OleDbCommand command = new OleDbCommand(query, connection);
+                    command.Parameters.AddWithValue("@route", _routeId);
+                    command.Parameters.AddWithValue("@departure", _departureStationId);
+                    command.Parameters.AddWithValue("@arrival", _arrivalStationId);
+                    command.Parameters.AddWithValue("@way", _wayType);
+                    command.Parameters.AddWithValue("@order", _orderNumber);
+                    command.Parameters.AddWithValue("@train", _trainNumber);
+                    command.ExecuteNonQuery();
+                }
+            }
+            else
+            {
+                throw new EqualDepartureAndArrivalStationsException("Станции отправления и прибытия совпадают. Проверьте ввод.");
+            }
         }
     }
 }

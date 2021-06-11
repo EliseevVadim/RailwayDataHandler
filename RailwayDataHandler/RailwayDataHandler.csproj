@@ -45,7 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Exceptions\EqualDepartureAndArrivalStationsException.cs" />
     <Compile Include="Core\Models\ALSNStatement.cs" />
+    <Compile Include="Core\Models\DatabaseInformation.cs" />
     <Compile Include="Core\Models\Depot.cs" />
     <Compile Include="Core\Models\Driver.cs" />
     <Compile Include="Core\Models\ExpenceStatement.cs" />
