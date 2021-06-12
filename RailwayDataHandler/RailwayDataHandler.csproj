@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Controller\MainDataController.cs" />
     <Compile Include="Core\Exceptions\EqualDepartureAndArrivalStationsException.cs" />
     <Compile Include="Core\Models\ALSNStatement.cs" />
     <Compile Include="Core\Models\DatabaseInformation.cs" />
