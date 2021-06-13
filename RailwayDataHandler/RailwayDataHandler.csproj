@@ -64,6 +64,96 @@
     <Compile Include="Core\Models\SequenceLocomotiveCrewStatement.cs" />
     <Compile Include="Core\Models\Station.cs" />
     <Compile Include="Core\Models\WorkTimeInformation.cs" />
+    <Compile Include="View\AddRecordToTableALSNStatement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddRecordToTableALSNStatement.Designer.cs">
+      <DependentUpon>AddRecordToTableALSNStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddRecordToTableDepot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddRecordToTableDepot.Designer.cs">
+      <DependentUpon>AddRecordToTableDepot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddRecordToTableDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddRecordToTableDriver.Designer.cs">
+      <DependentUpon>AddRecordToTableDriver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddRecordToTableExpenceStatement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddRecordToTableExpenceStatement.Designer.cs">
+      <DependentUpon>AddRecordToTableExpenceStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddRecordToTableLightReadings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddRecordToTableLightReadings.Designer.cs">
+      <DependentUpon>AddRecordToTableLightReadings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddRecordToTableLocomotive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddRecordToTableLocomotive.Designer.cs">
+      <DependentUpon>AddRecordToTableLocomotive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddRecordToTableLocomotiveBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddRecordToTableLocomotiveBatch.Designer.cs">
+      <DependentUpon>AddRecordToTableLocomotiveBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddRecordToTableLocomotiveStatement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddRecordToTableLocomotiveStatement.Designer.cs">
+      <DependentUpon>AddRecordToTableLocomotiveStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddRecordToTableNode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddRecordToTableNode.Designer.cs">
+      <DependentUpon>AddRecordToTableNode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddRecordToTableRoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddRecordToTableRoad.Designer.cs">
+      <DependentUpon>AddRecordToTableRoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddRecordToTableRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddRecordToTableRoute.Designer.cs">
+      <DependentUpon>AddRecordToTableRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddRecordToTableSequenceCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddRecordToTableSequenceCode.Designer.cs">
+      <DependentUpon>AddRecordToTableSequenceCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddRecordToTableSequenceStatementLocomativeCrew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddRecordToTableSequenceStatementLocomativeCrew.Designer.cs">
+      <DependentUpon>AddRecordToTableSequenceStatementLocomativeCrew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddRecordToTableStation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddRecordToTableStation.Designer.cs">
+      <DependentUpon>AddRecordToTableStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddRecordToTableWorkTimeInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddRecordToTableWorkTimeInformation.Designer.cs">
+      <DependentUpon>AddRecordToTableWorkTimeInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +162,51 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\AddRecordToTableALSNStatement.resx">
+      <DependentUpon>AddRecordToTableALSNStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddRecordToTableDepot.resx">
+      <DependentUpon>AddRecordToTableDepot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddRecordToTableDriver.resx">
+      <DependentUpon>AddRecordToTableDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddRecordToTableExpenceStatement.resx">
+      <DependentUpon>AddRecordToTableExpenceStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddRecordToTableLightReadings.resx">
+      <DependentUpon>AddRecordToTableLightReadings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddRecordToTableLocomotive.resx">
+      <DependentUpon>AddRecordToTableLocomotive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddRecordToTableLocomotiveBatch.resx">
+      <DependentUpon>AddRecordToTableLocomotiveBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddRecordToTableLocomotiveStatement.resx">
+      <DependentUpon>AddRecordToTableLocomotiveStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddRecordToTableNode.resx">
+      <DependentUpon>AddRecordToTableNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddRecordToTableRoad.resx">
+      <DependentUpon>AddRecordToTableRoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddRecordToTableRoute.resx">
+      <DependentUpon>AddRecordToTableRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddRecordToTableSequenceCode.resx">
+      <DependentUpon>AddRecordToTableSequenceCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddRecordToTableSequenceStatementLocomativeCrew.resx">
+      <DependentUpon>AddRecordToTableSequenceStatementLocomativeCrew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddRecordToTableStation.resx">
+      <DependentUpon>AddRecordToTableStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddRecordToTableWorkTimeInformation.resx">
+      <DependentUpon>AddRecordToTableWorkTimeInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
