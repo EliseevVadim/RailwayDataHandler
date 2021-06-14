@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Controller\Transferer.cs" />
     <Compile Include="Core\Controller\MainDataController.cs" />
     <Compile Include="Core\Exceptions\EqualDepartureAndArrivalStationsException.cs" />
     <Compile Include="Core\Models\ALSNStatement.cs" />
@@ -136,11 +137,11 @@
     <Compile Include="View\AddRecordToTableSequenceCode.Designer.cs">
       <DependentUpon>AddRecordToTableSequenceCode.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\AddRecordToTableSequenceStatementLocomativeCrew.cs">
+    <Compile Include="View\AddRecordToTableSequenceLocomativeCrewStatement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\AddRecordToTableSequenceStatementLocomativeCrew.Designer.cs">
-      <DependentUpon>AddRecordToTableSequenceStatementLocomativeCrew.cs</DependentUpon>
+    <Compile Include="View\AddRecordToTableSequenceLocomativeCrewStatement.Designer.cs">
+      <DependentUpon>AddRecordToTableSequenceLocomativeCrewStatement.cs</DependentUpon>
     </Compile>
     <Compile Include="View\AddRecordToTableStation.cs">
       <SubType>Form</SubType>
@@ -162,6 +163,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\SearchRouteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SearchRouteForm.Designer.cs">
+      <DependentUpon>SearchRouteForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\AddRecordToTableALSNStatement.resx">
       <DependentUpon>AddRecordToTableALSNStatement.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,8 +205,8 @@
     <EmbeddedResource Include="View\AddRecordToTableSequenceCode.resx">
       <DependentUpon>AddRecordToTableSequenceCode.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\AddRecordToTableSequenceStatementLocomativeCrew.resx">
-      <DependentUpon>AddRecordToTableSequenceStatementLocomativeCrew.cs</DependentUpon>
+    <EmbeddedResource Include="View\AddRecordToTableSequenceLocomativeCrewStatement.resx">
+      <DependentUpon>AddRecordToTableSequenceLocomativeCrewStatement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\AddRecordToTableStation.resx">
       <DependentUpon>AddRecordToTableStation.cs</DependentUpon>
@@ -219,6 +226,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\SearchRouteForm.resx">
+      <DependentUpon>SearchRouteForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

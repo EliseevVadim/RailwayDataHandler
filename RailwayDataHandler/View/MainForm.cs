@@ -15,7 +15,8 @@ namespace RailwayDataHandler.View
 {
     public partial class MainForm : Form
     {
-        MainDataController dataController; 
+        MainDataController dataController;
+        private bool standardView = true;
         public MainForm()
         {
             InitializeComponent();
@@ -156,7 +157,7 @@ namespace RailwayDataHandler.View
 
         private void buttonAddRecordToTableSequenceStatementLocomativeCrew_Click(object sender, EventArgs e)
         {
-            AddRecordToTableSequenceStatementLocomativeCrew addRecordToTableSequenceStatementLocomativeCrew = new AddRecordToTableSequenceStatementLocomativeCrew();
+            AddRecordToTableSequenceLocomativeCrewStatement addRecordToTableSequenceStatementLocomativeCrew = new AddRecordToTableSequenceLocomativeCrewStatement();
             if (addRecordToTableSequenceStatementLocomativeCrew.ShowDialog() == DialogResult.OK)
             {
                 locomotiveCrewStatementView.DataSource = dataController.LoadSequenceLocomotiveCrewStatement();
@@ -179,6 +180,26 @@ namespace RailwayDataHandler.View
             {
                 alsnStatementView.DataSource = dataController.LoadALSNStatement();
             }
+        }
+
+        private void searchRouteButton_Click(object sender, EventArgs e)
+        {
+            if (standardView)
+            {
+                SearchRouteForm searchRouteForm = new SearchRouteForm();
+                if (searchRouteForm.ShowDialog() == DialogResult.OK)
+                {
+                    routesView.DataSource = Transferer.SendedInformation;
+                    searchRouteButton.Text = "Вернуться";
+                    standardView = !standardView;
+                }            
+            }
+            else
+            {
+                routesView.DataSource = dataController.LoadRoutes();
+                searchRouteButton.Text = "Найти маршруты";
+                standardView = !standardView;
+            }           
         }
     }
 }

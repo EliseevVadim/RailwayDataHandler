@@ -90,6 +90,7 @@
             this.buttonAddRecordToTableALSNStatement = new System.Windows.Forms.Button();
             this.alsnStatementView = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.searchRouteButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -587,6 +588,7 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.panel11.Controls.Add(this.searchRouteButton);
             this.panel11.Controls.Add(this.buttonAddRecordToTableRoute);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel11.Location = new System.Drawing.Point(3, 592);
@@ -852,6 +854,19 @@
             this.panel2.Size = new System.Drawing.Size(1264, 681);
             this.panel2.TabIndex = 2;
             // 
+            // searchRouteButton
+            // 
+            this.searchRouteButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.searchRouteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchRouteButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.searchRouteButton.Location = new System.Drawing.Point(1100, 0);
+            this.searchRouteButton.Name = "searchRouteButton";
+            this.searchRouteButton.Size = new System.Drawing.Size(150, 50);
+            this.searchRouteButton.TabIndex = 1;
+            this.searchRouteButton.Text = "Найти маршруты";
+            this.searchRouteButton.UseVisualStyleBackColor = true;
+            this.searchRouteButton.Click += new System.EventHandler(this.searchRouteButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -979,6 +994,7 @@
         private System.Windows.Forms.Button buttonAddRecordToTableLocomotive_statement;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Button buttonAddRecordToTableALSNStatement;
+        private System.Windows.Forms.Button searchRouteButton;
     }
 }
 

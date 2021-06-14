@@ -33,6 +33,7 @@ namespace RailwayDataHandler.View
             this.buttonCloseForm = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.idLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.roadNameBox = new System.Windows.Forms.ComboBox();
             this.buttonAddRecord = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@ namespace RailwayDataHandler.View
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.idLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -103,6 +103,16 @@ namespace RailwayDataHandler.View
             this.panel2.Size = new System.Drawing.Size(800, 193);
             this.panel2.TabIndex = 2;
             // 
+            // idLabel
+            // 
+            this.idLabel.AutoSize = true;
+            this.idLabel.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.idLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.idLabel.Location = new System.Drawing.Point(502, 89);
+            this.idLabel.Name = "idLabel";
+            this.idLabel.Size = new System.Drawing.Size(0, 23);
+            this.idLabel.TabIndex = 8;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -124,6 +134,7 @@ namespace RailwayDataHandler.View
             this.roadNameBox.Name = "roadNameBox";
             this.roadNameBox.Size = new System.Drawing.Size(261, 31);
             this.roadNameBox.TabIndex = 6;
+            this.roadNameBox.SelectedIndexChanged += new System.EventHandler(this.roadNameBox_SelectedIndexChanged);
             // 
             // buttonAddRecord
             // 
@@ -138,6 +149,7 @@ namespace RailwayDataHandler.View
             this.buttonAddRecord.TabIndex = 5;
             this.buttonAddRecord.Text = "Добавить запись";
             this.buttonAddRecord.UseVisualStyleBackColor = false;
+            this.buttonAddRecord.Click += new System.EventHandler(this.buttonAddRecord_Click);
             // 
             // nodeFullNameField
             // 
@@ -145,9 +157,9 @@ namespace RailwayDataHandler.View
             this.nodeFullNameField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nodeFullNameField.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
             this.nodeFullNameField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.nodeFullNameField.Location = new System.Drawing.Point(160, 49);
+            this.nodeFullNameField.Location = new System.Drawing.Point(187, 49);
             this.nodeFullNameField.Name = "nodeFullNameField";
-            this.nodeFullNameField.Size = new System.Drawing.Size(628, 29);
+            this.nodeFullNameField.Size = new System.Drawing.Size(601, 29);
             this.nodeFullNameField.TabIndex = 4;
             // 
             // nodeShortNameField
@@ -156,9 +168,9 @@ namespace RailwayDataHandler.View
             this.nodeShortNameField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nodeShortNameField.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
             this.nodeShortNameField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.nodeShortNameField.Location = new System.Drawing.Point(160, 14);
+            this.nodeShortNameField.Location = new System.Drawing.Point(187, 14);
             this.nodeShortNameField.Name = "nodeShortNameField";
-            this.nodeShortNameField.Size = new System.Drawing.Size(628, 29);
+            this.nodeShortNameField.Size = new System.Drawing.Size(601, 29);
             this.nodeShortNameField.TabIndex = 4;
             // 
             // label3
@@ -194,16 +206,6 @@ namespace RailwayDataHandler.View
             this.label2.TabIndex = 2;
             this.label2.Text = "Полное имя:";
             // 
-            // idLabel
-            // 
-            this.idLabel.AutoSize = true;
-            this.idLabel.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.idLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.idLabel.Location = new System.Drawing.Point(502, 89);
-            this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(0, 23);
-            this.idLabel.TabIndex = 8;
-            // 
             // AddRecordToTableNode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,6 +217,7 @@ namespace RailwayDataHandler.View
             this.Name = "AddRecordToTableNode";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddRecordToTableNode";
+            this.Load += new System.EventHandler(this.AddRecordToTableNode_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

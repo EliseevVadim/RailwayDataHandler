@@ -116,9 +116,9 @@ namespace RailwayDataHandler.View
             this.sequenceCodeFullNameField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sequenceCodeFullNameField.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
             this.sequenceCodeFullNameField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.sequenceCodeFullNameField.Location = new System.Drawing.Point(190, 46);
+            this.sequenceCodeFullNameField.Location = new System.Drawing.Point(143, 49);
             this.sequenceCodeFullNameField.Name = "sequenceCodeFullNameField";
-            this.sequenceCodeFullNameField.Size = new System.Drawing.Size(598, 29);
+            this.sequenceCodeFullNameField.Size = new System.Drawing.Size(645, 29);
             this.sequenceCodeFullNameField.TabIndex = 4;
             // 
             // sequenceValueField
@@ -127,9 +127,9 @@ namespace RailwayDataHandler.View
             this.sequenceValueField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sequenceValueField.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
             this.sequenceValueField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.sequenceValueField.Location = new System.Drawing.Point(160, 14);
+            this.sequenceValueField.Location = new System.Drawing.Point(143, 14);
             this.sequenceValueField.Name = "sequenceValueField";
-            this.sequenceValueField.Size = new System.Drawing.Size(628, 29);
+            this.sequenceValueField.Size = new System.Drawing.Size(645, 29);
             this.sequenceValueField.TabIndex = 4;
             // 
             // label3
@@ -137,7 +137,7 @@ namespace RailwayDataHandler.View
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.label3.Location = new System.Drawing.Point(12, 13);
+            this.label3.Location = new System.Drawing.Point(12, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 23);
             this.label3.TabIndex = 3;
@@ -148,7 +148,7 @@ namespace RailwayDataHandler.View
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.label2.Location = new System.Drawing.Point(12, 48);
+            this.label2.Location = new System.Drawing.Point(12, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 23);
             this.label2.TabIndex = 2;

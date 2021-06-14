@@ -116,9 +116,9 @@ namespace RailwayDataHandler.View
             this.readingFullNameField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.readingFullNameField.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
             this.readingFullNameField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.readingFullNameField.Location = new System.Drawing.Point(160, 49);
+            this.readingFullNameField.Location = new System.Drawing.Point(132, 49);
             this.readingFullNameField.Name = "readingFullNameField";
-            this.readingFullNameField.Size = new System.Drawing.Size(628, 29);
+            this.readingFullNameField.Size = new System.Drawing.Size(656, 29);
             this.readingFullNameField.TabIndex = 4;
             // 
             // readingShortNameField
@@ -127,9 +127,9 @@ namespace RailwayDataHandler.View
             this.readingShortNameField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.readingShortNameField.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
             this.readingShortNameField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.readingShortNameField.Location = new System.Drawing.Point(160, 14);
+            this.readingShortNameField.Location = new System.Drawing.Point(132, 14);
             this.readingShortNameField.Name = "readingShortNameField";
-            this.readingShortNameField.Size = new System.Drawing.Size(628, 29);
+            this.readingShortNameField.Size = new System.Drawing.Size(656, 29);
             this.readingShortNameField.TabIndex = 4;
             // 
             // label3

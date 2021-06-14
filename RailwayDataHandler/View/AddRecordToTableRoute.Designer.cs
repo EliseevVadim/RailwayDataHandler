@@ -33,7 +33,10 @@ namespace RailwayDataHandler.View
             this.buttonCloseForm = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.routeNumberBox = new System.Windows.Forms.ComboBox();
+            this.routeNumberField = new System.Windows.Forms.TextBox();
+            this.routesDate = new System.Windows.Forms.DateTimePicker();
+            this.driversIdLabel = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.driversNameBox = new System.Windows.Forms.ComboBox();
             this.locomativeIdBox = new System.Windows.Forms.ComboBox();
             this.buttonAddRecord = new System.Windows.Forms.Button();
@@ -41,11 +44,6 @@ namespace RailwayDataHandler.View
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.routeIdLabel = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.driversIdLabel = new System.Windows.Forms.Label();
-            this.routesDate = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -92,12 +90,10 @@ namespace RailwayDataHandler.View
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel2.Controls.Add(this.routeNumberField);
             this.panel2.Controls.Add(this.routesDate);
             this.panel2.Controls.Add(this.driversIdLabel);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.routeIdLabel);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.routeNumberBox);
             this.panel2.Controls.Add(this.driversNameBox);
             this.panel2.Controls.Add(this.locomativeIdBox);
             this.panel2.Controls.Add(this.buttonAddRecord);
@@ -111,16 +107,45 @@ namespace RailwayDataHandler.View
             this.panel2.Size = new System.Drawing.Size(800, 222);
             this.panel2.TabIndex = 6;
             // 
-            // routeNumberBox
+            // routeNumberField
             // 
-            this.routeNumberBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.routeNumberBox.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
-            this.routeNumberBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.routeNumberBox.FormattingEnabled = true;
-            this.routeNumberBox.Location = new System.Drawing.Point(160, 10);
-            this.routeNumberBox.Name = "routeNumberBox";
-            this.routeNumberBox.Size = new System.Drawing.Size(246, 31);
-            this.routeNumberBox.TabIndex = 6;
+            this.routeNumberField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.routeNumberField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.routeNumberField.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
+            this.routeNumberField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.routeNumberField.Location = new System.Drawing.Point(160, 13);
+            this.routeNumberField.Name = "routeNumberField";
+            this.routeNumberField.Size = new System.Drawing.Size(246, 29);
+            this.routeNumberField.TabIndex = 12;
+            // 
+            // routesDate
+            // 
+            this.routesDate.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
+            this.routesDate.Location = new System.Drawing.Point(160, 117);
+            this.routesDate.Name = "routesDate";
+            this.routesDate.Size = new System.Drawing.Size(246, 29);
+            this.routesDate.TabIndex = 11;
+            // 
+            // driversIdLabel
+            // 
+            this.driversIdLabel.AutoSize = true;
+            this.driversIdLabel.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.driversIdLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.driversIdLabel.Location = new System.Drawing.Point(444, 83);
+            this.driversIdLabel.Name = "driversIdLabel";
+            this.driversIdLabel.Size = new System.Drawing.Size(0, 23);
+            this.driversIdLabel.TabIndex = 10;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.label7.Location = new System.Drawing.Point(412, 83);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 23);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "id:";
             // 
             // driversNameBox
             // 
@@ -132,6 +157,7 @@ namespace RailwayDataHandler.View
             this.driversNameBox.Name = "driversNameBox";
             this.driversNameBox.Size = new System.Drawing.Size(246, 31);
             this.driversNameBox.TabIndex = 6;
+            this.driversNameBox.SelectedIndexChanged += new System.EventHandler(this.driversNameBox_SelectedIndexChanged);
             // 
             // locomativeIdBox
             // 
@@ -157,13 +183,14 @@ namespace RailwayDataHandler.View
             this.buttonAddRecord.TabIndex = 5;
             this.buttonAddRecord.Text = "Добавить запись";
             this.buttonAddRecord.UseVisualStyleBackColor = false;
+            this.buttonAddRecord.Click += new System.EventHandler(this.buttonAddRecord_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.label3.Location = new System.Drawing.Point(12, 13);
+            this.label3.Location = new System.Drawing.Point(13, 13);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(141, 23);
             this.label3.TabIndex = 3;
@@ -174,7 +201,7 @@ namespace RailwayDataHandler.View
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.label5.Location = new System.Drawing.Point(12, 118);
+            this.label5.Location = new System.Drawing.Point(13, 122);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 23);
             this.label5.TabIndex = 2;
@@ -185,7 +212,7 @@ namespace RailwayDataHandler.View
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.label4.Location = new System.Drawing.Point(12, 83);
+            this.label4.Location = new System.Drawing.Point(13, 83);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 23);
             this.label4.TabIndex = 2;
@@ -196,60 +223,11 @@ namespace RailwayDataHandler.View
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.label2.Location = new System.Drawing.Point(12, 48);
+            this.label2.Location = new System.Drawing.Point(13, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "ID локомотива:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.label6.Location = new System.Drawing.Point(412, 13);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(26, 23);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "id:";
-            // 
-            // routeIdLabel
-            // 
-            this.routeIdLabel.AutoSize = true;
-            this.routeIdLabel.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.routeIdLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.routeIdLabel.Location = new System.Drawing.Point(444, 13);
-            this.routeIdLabel.Name = "routeIdLabel";
-            this.routeIdLabel.Size = new System.Drawing.Size(0, 23);
-            this.routeIdLabel.TabIndex = 8;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.label7.Location = new System.Drawing.Point(412, 83);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(26, 23);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "id:";
-            // 
-            // driversIdLabel
-            // 
-            this.driversIdLabel.AutoSize = true;
-            this.driversIdLabel.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.driversIdLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.driversIdLabel.Location = new System.Drawing.Point(444, 83);
-            this.driversIdLabel.Name = "driversIdLabel";
-            this.driversIdLabel.Size = new System.Drawing.Size(0, 23);
-            this.driversIdLabel.TabIndex = 10;
-            // 
-            // routesDate
-            // 
-            this.routesDate.Location = new System.Drawing.Point(160, 121);
-            this.routesDate.Name = "routesDate";
-            this.routesDate.Size = new System.Drawing.Size(246, 20);
-            this.routesDate.TabIndex = 11;
             // 
             // AddRecordToTableRoute
             // 
@@ -262,6 +240,7 @@ namespace RailwayDataHandler.View
             this.Name = "AddRecordToTableRoute";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddRecordToTableRoute";
+            this.Load += new System.EventHandler(this.AddRecordToTableRoute_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -276,7 +255,6 @@ namespace RailwayDataHandler.View
         private System.Windows.Forms.Button buttonCloseForm;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox routeNumberBox;
         private System.Windows.Forms.ComboBox driversNameBox;
         private System.Windows.Forms.ComboBox locomativeIdBox;
         private System.Windows.Forms.Button buttonAddRecord;
@@ -287,7 +265,6 @@ namespace RailwayDataHandler.View
         private System.Windows.Forms.DateTimePicker routesDate;
         private System.Windows.Forms.Label driversIdLabel;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label routeIdLabel;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox routeNumberField;
     }
 }

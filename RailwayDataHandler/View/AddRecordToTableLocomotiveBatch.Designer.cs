@@ -52,7 +52,7 @@ namespace RailwayDataHandler.View
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(361, 23);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Добавление записи в таблицу Locomative_Batch";
+            this.label1.Text = "Добавление записи в таблицу Locomotive_Batch";
             // 
             // buttonCloseForm
             // 
@@ -116,9 +116,9 @@ namespace RailwayDataHandler.View
             this.batchFullNameField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.batchFullNameField.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
             this.batchFullNameField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.batchFullNameField.Location = new System.Drawing.Point(160, 49);
+            this.batchFullNameField.Location = new System.Drawing.Point(132, 49);
             this.batchFullNameField.Name = "batchFullNameField";
-            this.batchFullNameField.Size = new System.Drawing.Size(628, 29);
+            this.batchFullNameField.Size = new System.Drawing.Size(656, 29);
             this.batchFullNameField.TabIndex = 4;
             // 
             // batchShortNameField
@@ -127,9 +127,9 @@ namespace RailwayDataHandler.View
             this.batchShortNameField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.batchShortNameField.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
             this.batchShortNameField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.batchShortNameField.Location = new System.Drawing.Point(160, 14);
+            this.batchShortNameField.Location = new System.Drawing.Point(132, 14);
             this.batchShortNameField.Name = "batchShortNameField";
-            this.batchShortNameField.Size = new System.Drawing.Size(628, 29);
+            this.batchShortNameField.Size = new System.Drawing.Size(656, 29);
             this.batchShortNameField.TabIndex = 4;
             // 
             // label3

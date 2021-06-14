@@ -33,6 +33,10 @@ namespace RailwayDataHandler.View
             this.buttonCloseForm = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.batchIdLabel = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.depotIdLabel = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.depotNameBox = new System.Windows.Forms.ComboBox();
             this.batchNameBox = new System.Windows.Forms.ComboBox();
             this.buttonAddRecord = new System.Windows.Forms.Button();
@@ -42,10 +46,6 @@ namespace RailwayDataHandler.View
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.depotIdLabel = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.batchIdLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +60,7 @@ namespace RailwayDataHandler.View
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(313, 23);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Добавление записи в таблицу Locomative";
+            this.label1.Text = "Добавление записи в таблицу Locomotive";
             // 
             // buttonCloseForm
             // 
@@ -111,6 +111,48 @@ namespace RailwayDataHandler.View
             this.panel2.Size = new System.Drawing.Size(800, 219);
             this.panel2.TabIndex = 5;
             // 
+            // batchIdLabel
+            // 
+            this.batchIdLabel.AutoSize = true;
+            this.batchIdLabel.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.batchIdLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.batchIdLabel.Location = new System.Drawing.Point(442, 48);
+            this.batchIdLabel.Name = "batchIdLabel";
+            this.batchIdLabel.Size = new System.Drawing.Size(0, 23);
+            this.batchIdLabel.TabIndex = 10;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.label7.Location = new System.Drawing.Point(410, 48);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 23);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "id:";
+            // 
+            // depotIdLabel
+            // 
+            this.depotIdLabel.AutoSize = true;
+            this.depotIdLabel.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.depotIdLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.depotIdLabel.Location = new System.Drawing.Point(442, 13);
+            this.depotIdLabel.Name = "depotIdLabel";
+            this.depotIdLabel.Size = new System.Drawing.Size(0, 23);
+            this.depotIdLabel.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.label6.Location = new System.Drawing.Point(410, 13);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(26, 23);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "id:";
+            // 
             // depotNameBox
             // 
             this.depotNameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
@@ -121,6 +163,7 @@ namespace RailwayDataHandler.View
             this.depotNameBox.Name = "depotNameBox";
             this.depotNameBox.Size = new System.Drawing.Size(223, 31);
             this.depotNameBox.TabIndex = 6;
+            this.depotNameBox.SelectedIndexChanged += new System.EventHandler(this.depotNameBox_SelectedIndexChanged);
             // 
             // batchNameBox
             // 
@@ -132,6 +175,7 @@ namespace RailwayDataHandler.View
             this.batchNameBox.Name = "batchNameBox";
             this.batchNameBox.Size = new System.Drawing.Size(223, 31);
             this.batchNameBox.TabIndex = 6;
+            this.batchNameBox.SelectedIndexChanged += new System.EventHandler(this.batchNameBox_SelectedIndexChanged);
             // 
             // buttonAddRecord
             // 
@@ -146,6 +190,7 @@ namespace RailwayDataHandler.View
             this.buttonAddRecord.TabIndex = 5;
             this.buttonAddRecord.Text = "Добавить запись";
             this.buttonAddRecord.UseVisualStyleBackColor = false;
+            this.buttonAddRecord.Click += new System.EventHandler(this.buttonAddRecord_Click);
             // 
             // locomotiveNumberField
             // 
@@ -213,48 +258,6 @@ namespace RailwayDataHandler.View
             this.label2.TabIndex = 2;
             this.label2.Text = "Короткое имя серии:";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.label6.Location = new System.Drawing.Point(410, 13);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(26, 23);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "id:";
-            // 
-            // depotIdLabel
-            // 
-            this.depotIdLabel.AutoSize = true;
-            this.depotIdLabel.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.depotIdLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.depotIdLabel.Location = new System.Drawing.Point(442, 13);
-            this.depotIdLabel.Name = "depotIdLabel";
-            this.depotIdLabel.Size = new System.Drawing.Size(0, 23);
-            this.depotIdLabel.TabIndex = 8;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.label7.Location = new System.Drawing.Point(410, 48);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(26, 23);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "id:";
-            // 
-            // batchIdLabel
-            // 
-            this.batchIdLabel.AutoSize = true;
-            this.batchIdLabel.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.batchIdLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.batchIdLabel.Location = new System.Drawing.Point(442, 48);
-            this.batchIdLabel.Name = "batchIdLabel";
-            this.batchIdLabel.Size = new System.Drawing.Size(0, 23);
-            this.batchIdLabel.TabIndex = 10;
-            // 
             // AddRecordToTableLocomotive
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -266,6 +269,7 @@ namespace RailwayDataHandler.View
             this.Name = "AddRecordToTableLocomotive";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddRecordToTableLocomotive";
+            this.Load += new System.EventHandler(this.AddRecordToTableLocomotive_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

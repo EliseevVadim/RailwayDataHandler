@@ -30,7 +30,24 @@ namespace RailwayDataHandler.Core.Models
         public string WorkFinishTime { get => _workFinishTime; set => _workFinishTime = value; }
         public double AverageTemperature { get => _averageTemperature; set => _averageTemperature = value; }
         public string RestOvertime { get => _restOvertime; set => _restOvertime = value; }
-        public string Reason { get => _reason; set => _reason = value; }
+        public string Reason 
+        {
+            get
+            {
+                return _reason;
+            }
+            set
+            {
+                if (String.IsNullOrEmpty(value))
+                {
+                    _reason = "-";
+                }
+                else
+                {
+                    _reason = value;
+                }
+            }
+        }
         public WorkTimeInformation() { }
 
         public WorkTimeInformation(int routeId, string wayType, string turnout, string locomotiveReception, string exit, string pass, string givingTime, string workFinishTime, double averageTemperature, string restOvertime, string reason)
