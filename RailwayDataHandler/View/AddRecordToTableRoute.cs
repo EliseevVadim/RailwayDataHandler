@@ -52,7 +52,7 @@ namespace RailwayDataHandler.View
             try
             {
                 Route route = new Route(int.Parse(locomativeIdBox.Text), int.Parse(driversIdLabel.Text), routeNumberField.Text, routesDate.Value.Date);
-                route.AddToDatabase();
+                dataController.AddRecord(route);
                 MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 DialogResult = DialogResult.OK;
                 Close();

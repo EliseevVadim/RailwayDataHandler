@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using RailwayDataHandler.Core.Models;
+using RailwayDataHandler.Core.Controller;
 
 namespace RailwayDataHandler.View
 {
@@ -27,7 +28,8 @@ namespace RailwayDataHandler.View
             try
             {
                 Road road = new Road(roadShortNameField.Text, roadDescriptionField.Text);
-                road.AddToDatabase();
+                MainDataController dataController = new MainDataController();
+                dataController.AddRecord(road);
                 MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 DialogResult = DialogResult.OK;
                 Close();

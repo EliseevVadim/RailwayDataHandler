@@ -57,7 +57,7 @@ namespace RailwayDataHandler.View
             try
             {
                 Locomotive locomotive = new Locomotive(int.Parse(depotIdLabel.Text), int.Parse(batchIdLabel.Text), locomotiveNumberField.Text, int.Parse(sectionNumberField.Text));
-                locomotive.AddToDatabase();
+                dataController.AddRecord(locomotive);
                 MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 DialogResult = DialogResult.OK;
                 Close();

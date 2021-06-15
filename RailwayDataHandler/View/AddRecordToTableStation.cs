@@ -49,7 +49,7 @@ namespace RailwayDataHandler.View
             try
             {
                 Station station = new Station(int.Parse(idLabel.Text), stationShortNameField.Text, stationFullNameField.Text);
-                station.AddToDatabase();
+                dataController.AddRecord(station);
                 MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 DialogResult = DialogResult.OK;
                 Close();

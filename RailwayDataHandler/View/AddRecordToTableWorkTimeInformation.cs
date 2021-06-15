@@ -64,7 +64,7 @@ namespace RailwayDataHandler.View
                 workTimeInformation.AverageTemperature = double.Parse(avarageTemperatureField.Text);
                 workTimeInformation.RestOvertime = restOverTimeField.Text;
                 workTimeInformation.Reason = reasonField.Text;
-                workTimeInformation.AddToDatabase();
+                dataController.AddRecord(workTimeInformation);
                 MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 DialogResult = DialogResult.OK;
                 Close();

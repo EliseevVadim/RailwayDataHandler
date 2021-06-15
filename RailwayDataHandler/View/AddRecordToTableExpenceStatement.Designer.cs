@@ -33,6 +33,14 @@ namespace RailwayDataHandler.View
             this.buttonCloseForm = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.sectionNumberField = new System.Windows.Forms.TextBox();
+            this.wayTypeBox = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dateLabel = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.numberLabel = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.routeIdBox = new System.Windows.Forms.ComboBox();
             this.buttonAddRecord = new System.Windows.Forms.Button();
             this.givingHeatingField = new System.Windows.Forms.TextBox();
@@ -44,14 +52,6 @@ namespace RailwayDataHandler.View
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateLabel = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.numberLabel = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.wayTypeBox = new System.Windows.Forms.ComboBox();
-            this.sectionNumberField = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -122,6 +122,95 @@ namespace RailwayDataHandler.View
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 319);
             this.panel2.TabIndex = 4;
+            // 
+            // sectionNumberField
+            // 
+            this.sectionNumberField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.sectionNumberField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sectionNumberField.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
+            this.sectionNumberField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.sectionNumberField.Location = new System.Drawing.Point(172, 80);
+            this.sectionNumberField.Name = "sectionNumberField";
+            this.sectionNumberField.Size = new System.Drawing.Size(616, 29);
+            this.sectionNumberField.TabIndex = 30;
+            // 
+            // wayTypeBox
+            // 
+            this.wayTypeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.wayTypeBox.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
+            this.wayTypeBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.wayTypeBox.FormattingEnabled = true;
+            this.wayTypeBox.Items.AddRange(new object[] {
+            "Туда",
+            "Обратно"});
+            this.wayTypeBox.Location = new System.Drawing.Point(172, 43);
+            this.wayTypeBox.Name = "wayTypeBox";
+            this.wayTypeBox.Size = new System.Drawing.Size(616, 31);
+            this.wayTypeBox.TabIndex = 29;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.label8.Location = new System.Drawing.Point(12, 80);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(114, 23);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "Номер секции";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.label7.Location = new System.Drawing.Point(12, 47);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 23);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Тип пути";
+            // 
+            // dateLabel
+            // 
+            this.dateLabel.AutoSize = true;
+            this.dateLabel.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.dateLabel.Location = new System.Drawing.Point(537, 16);
+            this.dateLabel.Name = "dateLabel";
+            this.dateLabel.Size = new System.Drawing.Size(0, 23);
+            this.dateLabel.TabIndex = 26;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.label14.Location = new System.Drawing.Point(470, 16);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(50, 23);
+            this.label14.TabIndex = 25;
+            this.label14.Text = "Дата:";
+            // 
+            // numberLabel
+            // 
+            this.numberLabel.AutoSize = true;
+            this.numberLabel.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numberLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.numberLabel.Location = new System.Drawing.Point(388, 16);
+            this.numberLabel.Name = "numberLabel";
+            this.numberLabel.Size = new System.Drawing.Size(0, 23);
+            this.numberLabel.TabIndex = 24;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.label13.Location = new System.Drawing.Point(319, 16);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(63, 23);
+            this.label13.TabIndex = 23;
+            this.label13.Text = "Номер:";
             // 
             // routeIdBox
             // 
@@ -248,95 +337,6 @@ namespace RailwayDataHandler.View
             this.label2.Size = new System.Drawing.Size(105, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "Тяга приёма:";
-            // 
-            // dateLabel
-            // 
-            this.dateLabel.AutoSize = true;
-            this.dateLabel.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.dateLabel.Location = new System.Drawing.Point(537, 16);
-            this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(0, 23);
-            this.dateLabel.TabIndex = 26;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.label14.Location = new System.Drawing.Point(470, 16);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(50, 23);
-            this.label14.TabIndex = 25;
-            this.label14.Text = "Дата:";
-            // 
-            // numberLabel
-            // 
-            this.numberLabel.AutoSize = true;
-            this.numberLabel.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numberLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.numberLabel.Location = new System.Drawing.Point(388, 16);
-            this.numberLabel.Name = "numberLabel";
-            this.numberLabel.Size = new System.Drawing.Size(0, 23);
-            this.numberLabel.TabIndex = 24;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.label13.Location = new System.Drawing.Point(319, 16);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 23);
-            this.label13.TabIndex = 23;
-            this.label13.Text = "Номер:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.label7.Location = new System.Drawing.Point(12, 47);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 23);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Тип пути";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.label8.Location = new System.Drawing.Point(12, 80);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(114, 23);
-            this.label8.TabIndex = 28;
-            this.label8.Text = "Номер секции";
-            // 
-            // wayTypeBox
-            // 
-            this.wayTypeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.wayTypeBox.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
-            this.wayTypeBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.wayTypeBox.FormattingEnabled = true;
-            this.wayTypeBox.Items.AddRange(new object[] {
-            "Туда",
-            "Обратно"});
-            this.wayTypeBox.Location = new System.Drawing.Point(172, 43);
-            this.wayTypeBox.Name = "wayTypeBox";
-            this.wayTypeBox.Size = new System.Drawing.Size(616, 31);
-            this.wayTypeBox.TabIndex = 29;
-            // 
-            // sectionNumberField
-            // 
-            this.sectionNumberField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.sectionNumberField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sectionNumberField.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
-            this.sectionNumberField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.sectionNumberField.Location = new System.Drawing.Point(172, 80);
-            this.sectionNumberField.Name = "sectionNumberField";
-            this.sectionNumberField.Size = new System.Drawing.Size(616, 29);
-            this.sectionNumberField.TabIndex = 30;
             // 
             // AddRecordToTableExpenceStatement
             // 

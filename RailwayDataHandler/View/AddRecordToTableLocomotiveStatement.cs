@@ -91,7 +91,7 @@ namespace RailwayDataHandler.View
                 locomotiveStatement.SequenceCodeId = int.Parse(sequenceCodeLabel.Text);
                 locomotiveStatement.LocomotiveId = int.Parse(locomotiveIdBox.Text);
                 locomotiveStatement.RouteId = int.Parse(routeIdBox.Text);
-                locomotiveStatement.AddToDatabase();
+                dataController.AddRecord(locomotiveStatement);
                 MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 DialogResult = DialogResult.OK;
                 Close();

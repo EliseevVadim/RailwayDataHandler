@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using RailwayDataHandler.Core.Models;
+using RailwayDataHandler.Core.Controller;
 
 namespace RailwayDataHandler.View
 {
@@ -27,7 +28,8 @@ namespace RailwayDataHandler.View
             try
             {
                 Driver driver = new Driver(driversNameField.Text, int.Parse(driversCategoryField.Text));
-                driver.AddToDatabase();
+                MainDataController dataController = new MainDataController();
+                dataController.AddRecord(driver);
                 MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 DialogResult = DialogResult.OK;
                 Close();

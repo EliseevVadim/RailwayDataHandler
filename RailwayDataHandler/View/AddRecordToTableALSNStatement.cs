@@ -73,7 +73,7 @@ namespace RailwayDataHandler.View
                 statement.LighterReadingsId = int.Parse(lighterReadingId.Text);
                 statement.RouteId = int.Parse(routeIdBox.Text);
                 statement.SectionNumber = int.Parse(sectionNumberField.Text);
-                statement.AddToDatabase();
+                dataController.AddRecord(statement);
                 MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 DialogResult = DialogResult.OK;
                 Close();

@@ -49,7 +49,7 @@ namespace RailwayDataHandler.View
             try
             {
                 Depot depot = new Depot(int.Parse(idLabel.Text), depotShortNameField.Text, depotFullNameField.Text);
-                depot.AddToDatabase();
+                dataController.AddRecord(depot);
                 MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 DialogResult = DialogResult.OK;
                 Close();

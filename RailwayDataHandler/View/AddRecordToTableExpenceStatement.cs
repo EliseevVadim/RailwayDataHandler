@@ -54,7 +54,7 @@ namespace RailwayDataHandler.View
                 expenceStatement.GivingHeating = double.Parse(givingHeatingField.Text);
                 expenceStatement.WayType = wayTypeBox.Text;
                 expenceStatement.SectionNumber = int.Parse(sectionNumberField.Text);
-                expenceStatement.AddToDatabase();
+                dataController.AddRecord(expenceStatement);
                 MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 DialogResult = DialogResult.OK;
                 Close();

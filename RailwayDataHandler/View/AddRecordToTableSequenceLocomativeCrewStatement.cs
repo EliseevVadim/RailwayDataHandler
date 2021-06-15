@@ -67,7 +67,7 @@ namespace RailwayDataHandler.View
                 sequenceLocomotiveCrewStatement.OrderNumber = int.Parse(orderNumberField.Text);
                 sequenceLocomotiveCrewStatement.ArrivalTime = arrivalTimeField.Text;
                 sequenceLocomotiveCrewStatement.DepartureTime = departureTimeField.Text;
-                sequenceLocomotiveCrewStatement.AddToDatabase();
+                dataController.AddRecord(sequenceLocomotiveCrewStatement);
                 MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 DialogResult = DialogResult.OK;
                 Close();

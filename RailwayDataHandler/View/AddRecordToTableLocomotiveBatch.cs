@@ -1,4 +1,5 @@
-﻿using RailwayDataHandler.Core.Models;
+﻿using RailwayDataHandler.Core.Controller;
+using RailwayDataHandler.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +28,8 @@ namespace RailwayDataHandler.View
             try
             {
                 LocomotiveBatch batch = new LocomotiveBatch(batchShortNameField.Text, batchFullNameField.Text);
-                batch.AddToDatabase();
+                MainDataController dataController = new MainDataController();
+                dataController.AddRecord(batch);
                 MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 DialogResult = DialogResult.OK;
                 Close();

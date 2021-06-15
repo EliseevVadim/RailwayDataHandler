@@ -1,4 +1,5 @@
-﻿using RailwayDataHandler.Core.Models;
+﻿using RailwayDataHandler.Core.Controller;
+using RailwayDataHandler.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +28,8 @@ namespace RailwayDataHandler.View
             try
             {
                 SequenceCode code = new SequenceCode(sequenceValueField.Text, sequenceCodeFullNameField.Text);
-                code.AddToDatabase();
+                MainDataController dataController = new MainDataController();
+                dataController.AddRecord(code);
                 MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 DialogResult = DialogResult.OK;
                 Close();
